@@ -1,3 +1,19 @@
+---
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../assets/css/styles.css";
+import Header from "../components/Header.astro";
+// import NavigatorMenu from "../components/NavigatorMenu";
+// import Navigator from "../components/Navigator.astro";
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,10 +21,30 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+    	<title>{title}</title>		
 	</head>
+
 	<body>
+	<div id="content"></div>
+	  
+	<header>
+		<Header/>
+		<!-- <NavigatorMenu/> -->
+		<!-- <Navigator currentPath={Astro.url.pathname} /> -->
+	</header>
+
+	<main>
 		<slot />
+	</main>
+
+	<footer>
+		<Footer/>
+	</footer>
+
+
+    <script>
+      import "bootstrap/dist/js/bootstrap.bundle.min.js";	  
+    </script>
 	</body>
 </html>
 
