@@ -1,3 +1,36 @@
+body {
+  background: url('/images/bg.jpg');
+  object-fit: contain;
+}
+.hdr {
+  background: url('/images/bg.jpg');
+  object-fit: contain;
+}
+.userpic {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 20px;
+  margin-top: -90px !important;
+}
+.justify {
+  text-align: justify !important;
+}
+
+.embossed-image {
+  filter: drop-shadow(3px 3px 1 rgba(255, 255, 255, 0.5)) 
+          drop-shadow(-2px -2px 1 rgba(0, 0, 0, 0.5));
+          opacity: 0.9;
+}
+.embossed-text {
+  font-family: Arial, sans-serif;
+  font-size: 1em; /* Adjust as needed */
+  color: #c0c0c0; /* Text color, often a mid-tone */
+  background-color: #e0e0e0; /* Background color, slightly different from text color */
+  text-shadow: 
+    -1px -1px 0px rgba(255, 255, 255, 0.8), /* Light shadow for highlight */
+    1px 1px 0px rgba(0, 0, 0, 0.4); /* Dark shadow for depth */
+}
 
 #offcanvasMenu {
     width: 50% !important;
@@ -5,13 +38,51 @@
 .bg-azure {
   background-color: rgb(118, 139, 139);
 }  
+
+.aboutus {  
+  width: 100% !important;
+  height: 300px !important;  
+  margin: 0 auto !important;
+  border-radius: 20px;
+}
+.about-text {
+  text-align: justify;
+}
+.contactus {
+  width: 100% !important;
+  height: 300px !important;  
+  margin: 0 auto !important;
+  border-radius: 20px;
+}
+.card-img-top {
+  position: relative;
+  margin: 0 auto;
+  top: 10px !important;
+  max-width: 100%! important;
+  width: 90% !important;
+  height: 40vh !important;
+}
+.logo {
+  position:relative;
+  margin-top: -10px;
+  width: 100px !important;
+  height: 70px !important;
+}
+.card-box {
+  position: relative;
+  margin: 0 auto;
+  top: 10px !important;
+  max-width: 100%! important;
+  width: 90% !important;
+  height: 70vh !important;
+}
 .bg-purple {
   background-color: rgb(75, 14, 75);
 }
-  .logo {
+  /* .logo {
     width: 120px !important;
     height: 40px !important;
-  }
+  } */
   #staticMfaLabel {
     font-size: 20px !important;
   }
@@ -159,25 +230,57 @@
   }
   
   @media (max-width: 991.98px) {
-   .aboutus {
-    max-height: 100% !important;
-    margin-bottom: 50px !important;
-   }
-  
+    .aboutus {  
+      width: 100% !important;
+      height: 200px !important;  
+      margin: 0 auto !important;
+      border-radius: 20px;
+    }
+    .userpic {
+      margin-left: 50px !important;
+      width: 100px !important;
+      height: 100px !important;
+    }
+    .mfa-btn {
+      width: 200px !important;
+      margin-left: -100px !important;
+    }
+    .mfa-pos-1 {
+      width: 300px !important;
+      margin-left: -90px !important;
+      margin-top: 200px !important;
+    }
+    .mfa-pos-2 {
+      width: 200px !important;
+      margin-left: -90px !important;
+      margin-top: 10px !important;
+    }
+    .file-input {
+      position:relative !important;
+      font: 12px !important;
+      width: 80px !important;
+      margin-left: 250px !important;
+      margin-top: -50px !important;
+      top: -50px !important;
+    }
+    #mobileno {
+      width: 165px !important;
+    }
    .contactus {
-    position: fixed;
-    max-height: 100% !important;
-    margin-bottom: 50px !important;
-   }
-  
+    width: 100% !important;
+    height: 200px !important;  
+    margin: 0 auto !important;
+    border-radius: 20px;
+  }
+     
    .footer {
-    bottom: -10px; /* Adjust based on footer height */
+    bottom: 10px; /* Adjust based on footer height */
     width: 100%;
     transition: bottom 0.3s ease-in-out; /* Smooth transition */  
    }
    .footer.show {
     position: fixed; /* or absolute */
-    bottom: -10px; /* Adjust based on footer height */
+    bottom: 10px; /* Adjust based on footer height */
     width: 100%;
     transition: bottom 0.3s ease-in-out; /* Smooth transition */  
     }
@@ -186,3 +289,4 @@
       visibility: hidden;
     }
    }
+

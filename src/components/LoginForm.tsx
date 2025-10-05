@@ -30,7 +30,6 @@ function Login() {
     const jsondata = JSON.stringify({ username: username, password: password });
     api.post("/signin", jsondata)
     .then((res: any) => {
-            alert("ok");
             setMessage(res.data.message);
             if (res.data.qrcodeurl !== null) {
                 sessionStorage.setItem('USERID',res.data.id);

@@ -73,7 +73,7 @@ export default function Profile() {
         } else {
             setToken('');
         }
-        // fetchUserData(userId, xtoken);
+        fetchUserData(userId, xtoken);
     },[userid, token, userpicture]) 
 
     const submitProfile = (e: any) => {
@@ -289,7 +289,7 @@ export default function Profile() {
                             <input className="form-control mt-2" id="mobileno" name="mobileno" type="text" value={mobile} onChange={e => setMobile(e.target.value)} required />
                     </div>
                     <div className='col'>
-                        <input className="userpicture mt-2" onChange={changePicture} type="file"/>
+                        <input className="userpicture mt-2 file-input" onChange={changePicture} type="file"/>
                     </div>
                 </div>
 
@@ -317,8 +317,10 @@ export default function Profile() {
                             <div className='col-7'>
                                 <p className='text-danger mfa-pos-1'><strong>Requirements</strong></p>
                                 <p className="mfa-pos-2">You need to install <strong>Google or Microsoft Authenticator</strong> in your Mobile Phone, once installed, click Enable Button below, and <strong>SCAN QR CODE</strong>, next time you login, another dialog window will appear, then enter the <strong>OTP CODE</strong> from your Mobile Phone in order for you to login.</p>
+                                <div className="mfa-btn">
                                 <button onClick={enableMFA} type="button" className='btn btn-primary mfa-btn-1 mx-1'>enable</button>
                                 <button onClick={disableMFA} type="button" className='btn btn-secondary mfa-btn-2'>disable</button>
+                                </div>
                             </div>
                             </div>
                                 )
