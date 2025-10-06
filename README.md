@@ -1,5 +1,9 @@
 ASTRO-TYPESCRIPT FRONT-END FRAMEWORK
 
+Dependencies:
+1. Node 23.5.0
+2. npm 11.1.0
+
 Features:
 1. User's Login / Logout and Registration
 2. Multi-Factor Authentication
